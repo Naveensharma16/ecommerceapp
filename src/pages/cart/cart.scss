@@ -47,6 +47,17 @@
       cursor: pointer;
     }
   }
+
+  .counter {
+    // display: flex;
+    span {
+      color: black;
+      font-size: 1.6rem;
+      display: inline-block;
+      margin-inline: 2px;
+      cursor: pointer;
+    }
+  }
 }
 
 .total-to-pay {

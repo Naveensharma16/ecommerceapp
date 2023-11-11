@@ -6,6 +6,7 @@ import {
   updateQuantity,
 } from "../../features/cart/cartSlice";
 import { Link } from "react-router-dom";
+import toast from "../../customtoast/toast";
 
 import "./cart.scss";
 import remove from "../../assets/cross.png";
@@ -32,7 +33,14 @@ export default function Cart() {
 
   // function to change quantity of products in state by dispatching
   const handleChangeQuantity = (cartproductid, quantity) => {
-    dispatch(updateQuantity({ cartproductid, quantity }));
+    if (quantity < 1) {
+      return "";
+    } else if (quantity > 5) {
+      toast("quantity cannot be more that 5");
+      return "";
+    } else {
+      dispatch(updateQuantity({ cartproductid, quantity }));
+    }
   };
 
   // function to remove item from cart
@@ -73,16 +81,23 @@ export default function Cart() {
                     </td>
                     <td>
                       <h3>
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          min={1}
-                          value={item.quantity}
-                          onChange={(event) =>
-                            handleChangeQuantity(item.id, event.target.value)
-                          }
-                        />
+                        <div className="counter">
+                          <span
+                            onClick={() =>
+                              handleChangeQuantity(item.id, item.quantity - 1)
+                            }
+                          >
+                            -
+                          </span>
+                          <span>{item.quantity}</span>
+                          <span
+                            onClick={() =>
+                              handleChangeQuantity(item.id, item.quantity + 1)
+                            }
+                          >
+                            +
+                          </span>
+                        </div>
                       </h3>
                     </td>
                     <td>

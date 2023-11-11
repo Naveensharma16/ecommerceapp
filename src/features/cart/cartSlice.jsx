@@ -27,7 +27,6 @@ const cartSlice = createSlice({
         state.cart = [...state.cart, action.payload];
         // adding cart state value in cookies
         Cookies.set("cart", JSON.stringify(state.cart), { expires: 1 });
-        // TODO: create a custom toast that will give user msg
         toast("added to cart");
       } else {
         toast("already in cart");
