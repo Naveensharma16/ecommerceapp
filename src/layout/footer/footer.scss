@@ -1,0 +1,40 @@
+.footer-wrap {
+  padding: 40px 0px;
+  background-color: #fff;
+  .flex-layout {
+    justify-content: space-between;
+  }
+  .column {
+    p {
+      font-size: 1.6rem;
+    }
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-left: 20px;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 767px) {
+    padding: 20px 0px;
+    .column {
+      ul {
+        text-align: center;
+        li {
+          margin-left: 0px;
+          margin-right: 15px;
+        }
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

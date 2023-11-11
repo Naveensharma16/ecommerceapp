@@ -1,0 +1,7 @@
+.all-categories-container {
+  margin-block: 200px 50px;
+
+  @media only screen and (max-device-width: 767px) {
+    margin-block: 80px 50px;
+  }
+}

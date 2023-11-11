@@ -1,0 +1,124 @@
+.section-heading {
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-gap {
+  margin-block: 60px;
+}
+
+.home-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 35vh 0;
+
+  @media only screen and (max-device-width: 767px) {
+    padding: 15vh 0;
+  }
+
+  .flex-layout {
+    align-items: center;
+  }
+  .hero-content {
+    width: 45%;
+
+    @media only screen and (max-device-width: 767px) {
+      width: 75%;
+    }
+
+    h1 {
+      font-size: 4.3rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #006266;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+  }
+}
+
+.home-banner-slider {
+  .slick-prev {
+    left: 0px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    &::before {
+      font-family: none;
+      font-size: 32px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+    &:hover,
+    &:focus {
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+  .slick-next {
+    right: 0px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    &::before {
+      font-family: none;
+      font-size: 32px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+    &:hover,
+    &:focus {
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+  .slider-one {
+    background-image: url("../../assets/bannerbg.webp");
+  }
+  // .slider-one {
+  // }
+  // .slider-one {
+  // }
+}
+
+.all-product-categories-list {
+  .flex-layout {
+    justify-content: space-between !important;
+  }
+}
+
+.our-intro {
+  // align-items: flex-start;
+  .flex-layout {
+    justify-content: space-between;
+  }
+  .column {
+    width: 47%;
+    h3 {
+      font-size: 2.5rem;
+      font-weight: normal;
+      margin-block: 15px;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+    img {
+      width: 100%;
+    }
+
+    @media only screen and (max-device-width: 767px) {
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

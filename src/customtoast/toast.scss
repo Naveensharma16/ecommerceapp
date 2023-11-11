@@ -1,0 +1,41 @@
+// tostifty component start
+.toastify-popup {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  position: fixed;
+  right: 90px;
+  top: 130px;
+  z-index: 8;
+  cursor: pointer;
+  display: none;
+  animation-name: moveback;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.show-toast {
+  display: block !important;
+  animation-name: movefront;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.hide-toast {
+  animation-name: moveback;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movefront {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 90px;
+  }
+}
+
+// tostifty component ends

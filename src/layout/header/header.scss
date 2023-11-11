@@ -1,0 +1,114 @@
+.menu-layout {
+  .desktop-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: #fff;
+
+    .logo-contain {
+      img {
+        width: 200px;
+      }
+    }
+
+    .menu {
+      a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: inline-block;
+        margin: 0px 10px;
+      }
+    }
+
+    .ecommerce-menu {
+      img {
+        display: inline-block;
+        width: 30px;
+        margin: 0px 10px;
+      }
+      #cart-count {
+        position: relative;
+        span {
+          position: absolute;
+          top: -26px;
+          right: 0px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.3rem;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  @media only screen and (max-device-width: 767px) {
+    .desktop-menu {
+      display: none;
+    }
+    .mobile-menu {
+      display: block;
+      background-color: #2b4b18;
+      padding: 15px 0px;
+
+      .menu-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 15px;
+
+        .mobile-logo-container {
+          img {
+            width: 210px;
+          }
+        }
+        .mobile-menu-open-button {
+          button {
+            background: transparent;
+            border: none;
+          }
+        }
+      }
+
+      .mobile-sidebar-menu {
+        width: 82%;
+        height: 100vh;
+        background-color: #2b4b18;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        padding: 90px 25px;
+        ul {
+          list-style-type: none;
+          li {
+            margin-bottom: 15px;
+            a {
+              text-decoration: none;
+              font-size: 2rem;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .show {
+        display: block;
+        transition: all 0.4s ease-in;
+      }
+      .hide {
+        display: none;
+        transition: all 0.4s ease-in;
+      }
+    }
+  }
+}
